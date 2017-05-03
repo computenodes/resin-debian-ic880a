@@ -2,7 +2,8 @@ FROM resin/rpi-raspbian:jessie
 
 RUN apt-get update&& apt-get install \
     bash \
-    git && \
+    git  \
+    iputils-ping && \
     git clone -b resin-debian https://github.com/pjb304/ic880a-gateway.git && \
     cd ic880a-gateway && \
     git pull && \
