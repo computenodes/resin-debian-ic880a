@@ -1,4 +1,4 @@
-FROM resin/armhf-debian:slim
+FROM resin/armv7hf-debian:slim
 
 RUN apt-get update&& apt-get install \
     bash \
