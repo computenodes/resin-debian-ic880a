@@ -1,0 +1,14 @@
+FROM resin/armhf-debian:slim
+
+RUN apt-get update&& apt-get install \
+    bash \
+    git && \
+    git clone -b resin-debian https://github.com/pjb304/ic880a-gateway.git && \
+    cd ic880a-gateway && \
+    git pull && \
+    ./install.sh remote
+
+
+WORKDIR /opt/ttn-gateway/bin
+
+CMD ./start.sh
