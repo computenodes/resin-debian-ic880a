@@ -5,7 +5,8 @@ RUN apt-get update&& apt-get install \
     bash \
     git  \
     iproute \
-    iputils-ping && \
+    iputils-ping  \
+    module-init-tools && \
     git clone -b resin-debian https://github.com/pjb304/ic880a-gateway.git && \
     cd ic880a-gateway && \
     git pull && \
