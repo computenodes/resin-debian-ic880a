@@ -15,4 +15,4 @@ RUN apt-get update&& apt-get install \
 
 WORKDIR /opt/ttn-gateway/bin
 
-CMD modprobe i2c-dev && hwclock -r && ./start.sh
+CMD modprobe i2c-dev && hwclock -s && ./start.sh
