@@ -13,10 +13,9 @@ RUN apt-get update&& apt-get install \
     git clone -b resin-debian https://github.com/pjb304/ic880a-gateway.git && \
     cd ic880a-gateway && \
     git pull && \
-    ./install.sh remote
-
-WORKDIR /root
-RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git &&
+    ./install.sh remote &&
+    cd /root &&
+    git clone https://github.com/adafruit/Adafruit_Python_DHT.git &&
     cd Adafruit_Python_DHT &&
     python setup.py install
 
