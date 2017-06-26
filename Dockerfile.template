@@ -14,12 +14,15 @@ RUN apt-get update&& apt-get install \
     cd ic880a-gateway && \
     git pull && \
     ./install.sh remote && \
-    cd /root && \
+    mkdir -p /opt/logging && \
+    cd /opt/logging  && \
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git && \
     cd Adafruit_Python_DHT && \
-    python setup.py install
+    /usr/bin/python setup.py install
 
-WORKDIR /opt/ttn-gateway/bin
+WORKDIR /opt/logging
+COPY sense /opt/logging/sense
+COPY run /opt/logging/run
 
 #CMD modprobe i2c-dev && hwclock -s && ./start.sh
-CMD ./start.sh
+CMD ./run
