@@ -21,8 +21,10 @@ RUN apt-get update&& apt-get install \
     /usr/bin/python setup.py install
 
 WORKDIR /opt/logging
-COPY sense /opt/logging/sense
-COPY run /opt/logging/run
+COPY . ./
+
+#remove apt lists to reduce image size
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 #CMD modprobe i2c-dev && hwclock -s && ./start.sh
 CMD ./run
