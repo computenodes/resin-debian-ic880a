@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /root/Adafruit_Python_DHT/
+cd /opt/logging/Adafruit_Python_DHT
 python setup.py install
 
 while 1
