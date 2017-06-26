@@ -5,7 +5,7 @@ python setup.py install
 while 1
 do
     date=`date`
-    cpu_tmp=`cat /sys/class/thermal/thermal_zone0/temp
+    cpu_tmp=`cat /sys/class/thermal/thermal_zone0/temp`
     cpu_speed=`cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq`
     dht_out=`./Adafruit_Python_DHT/examples/AdafruitDHT/py 22 26`
     box_tmp=`echo $dhtout | cut -c 6-9`
@@ -14,4 +14,3 @@ do
     echo "$date\t$cpu_temp\t$box_tmp\t$box_hum\r\n" >> /data/data.log
     sleep 120
 done
-
