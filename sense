@@ -2,7 +2,7 @@
 cd /opt/logging/Adafruit_Python_DHT
 python setup.py install
 
-while 1
+while true
 do
     date=`date`
     cpu_tmp=`cat /sys/class/thermal/thermal_zone0/temp`
