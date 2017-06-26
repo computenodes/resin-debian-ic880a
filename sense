@@ -7,7 +7,7 @@ do
     date=`date`
     cpu_tmp=`cat /sys/class/thermal/thermal_zone0/temp
     cpu_speed=`cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq`
-    dht_out=`/root/Adafruit_Python_DHT/examples/AdafruitDHT/py 22 26`
+    dht_out=`./Adafruit_Python_DHT/examples/AdafruitDHT/py 22 26`
     box_tmp=`echo $dhtout | cut -c 6-9`
     box_hum=`echo $dht_out | cut 21-24`
 
