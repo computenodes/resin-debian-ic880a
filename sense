@@ -11,6 +11,6 @@ do
     box_tmp=`echo $dhtout | cut -c 6-9`
     box_hum=`echo $dht_out | cut -c 21-24`
 
-    echo "$(date),$(cpu_temp),$(box_tmp),$(box_hum)" >> /data/data.log
+    echo "${date},${cpu_temp},${box_tmp},${box_hum}" >> /data/data.log
     sleep 120
 done
