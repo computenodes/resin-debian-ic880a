@@ -8,12 +8,16 @@ RUN apt-get update&& apt-get install \
     iproute \
     iputils-ping  \
     module-init-tools \
+    putty-tools \
     python-dev \
     python-openssl && \
     git clone -b resin-debian https://github.com/computenodes/ic880a-gateway.git && \
     cd ic880a-gateway && \
     git pull && \
-    ./install.sh remote
+    ./install.sh remote && \
+
+#remove apt lists to reduce image size
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/ttn-gateway/bin
 
