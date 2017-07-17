@@ -15,12 +15,6 @@ RUN apt-get update&& apt-get install \
     git pull && \
     ./install.sh remote
 
-WORKDIR /root
-RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git &&
-    cd Adafruit_Python_DHT &&
-    python setup.py install
-
 WORKDIR /opt/ttn-gateway/bin
 
-#CMD modprobe i2c-dev && hwclock -s && ./start.sh
 CMD ./start.sh
