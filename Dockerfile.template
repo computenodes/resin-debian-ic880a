@@ -16,7 +16,7 @@ RUN apt-get update&& apt-get install \
     git pull && \
     ./install.sh remote && \
     apt-get cean && \ # remove apt lists to reduce size
-    rn -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/ttn-gateway/bin
 
