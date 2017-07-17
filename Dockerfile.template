@@ -1,6 +1,6 @@
 FROM resin/armv7hf-debian:jessie
 
-RUN apt-get update&& apt-get install \
+RUN apt-get update && apt-get install \
     bash \
     build-essential \
     git  \
