@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install \
     iproute \
     iputils-ping  \
     module-init-tools \
-    putty-tools \
     python-dev \
     python-openssl && \
     git clone -b resin-debian https://github.com/computenodes/ic880a-gateway.git && \
