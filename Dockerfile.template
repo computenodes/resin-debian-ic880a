@@ -15,7 +15,7 @@ RUN apt-get update&& apt-get install \
     cd ic880a-gateway && \
     git pull && \
     ./install.sh remote && \
-    apt-get cean && \ # remove apt lists to reduce size
+    apt-get clean && \ # remove apt lists to reduce size
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/ttn-gateway/bin
