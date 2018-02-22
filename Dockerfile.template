@@ -20,6 +20,8 @@ RUN apt-get update && apt-get install \
     apt-get clean && \ 
     rm -rf /var/lib/apt/lists/*
 
+COPY ds3231.sh /opt
+
 WORKDIR /opt/ttn-gateway/bin
 
 CMD ./start.sh
