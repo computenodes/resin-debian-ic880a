@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 modprobe rtc-ds1307
 if [[ $? != 0 ]]
 then
