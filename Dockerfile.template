@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install \
     iproute \
     iputils-ping  \
     module-init-tools \
-    ntpd \
+    ntp \
     openssh-client \
     python-dev \
     python-openssl && \
