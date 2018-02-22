@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install \
     rm -rf /var/lib/apt/lists/*
 
 COPY ds3231.sh /opt
+COPY rc.local /etc
 
 WORKDIR /opt/ttn-gateway/bin
 
