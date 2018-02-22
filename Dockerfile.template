@@ -23,6 +23,8 @@ RUN apt-get update && apt-get install \
 COPY ds3231.sh /opt
 COPY rc.local /etc
 
+ENV INITSYSTEM ON
+
 WORKDIR /opt/ttn-gateway/bin
 
 CMD ./start.sh
