@@ -11,5 +11,5 @@
 #
 # By default this script does nothing.
 
-echo "RC.LOCAL ERROR TEST"
-exit 1
+echo "RC.LOCAL ERROR TEST" >> /data/foo
+exit 0
