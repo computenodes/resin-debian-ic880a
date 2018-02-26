@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install \
     git pull && \
     ./install.sh remote && \
     mkdir -p /opt/logging && \
-    cd /opt/logging  && \
+    cd /opt/  && \
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git && \
     cd Adafruit_Python_DHT && \
     /usr/bin/python setup.py install --force-pi2 && \
