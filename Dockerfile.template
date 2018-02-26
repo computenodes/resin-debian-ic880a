@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install \
     cd /opt/logging  && \
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git && \
     cd Adafruit_Python_DHT && \
-    /usr/bin/python setup.py install --force-pi && \
+    /usr/bin/python setup.py install --force-pi2 && \
     apt-get clean && \ 
     rm -rf /var/lib/apt/lists/*
 
