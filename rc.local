@@ -24,7 +24,7 @@ then
     echo "ERROR: rtc setup failed"
 fi
 
-hwclock -w
+hwclock -s
 if [[ $? != 0 ]]
 then
     echo "ERROR: read time from HWclock failed"
