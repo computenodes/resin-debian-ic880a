@@ -30,6 +30,11 @@ COPY rc.local /etc
 COPY sense /opt
 RUN echo "*/2 * * * * /opt/sense" | crontab
 
+# GPSd integration based on https://github.com/proffalken/Resin-GPS-NTP/blob/master/Dockerfile.template
+COPY default_gpsd /etc/default/gpsd
+COPY default_ntp etc/default/ntp
+COPY ntp.conf /etc/ntp.conf
+
 ENV INITSYSTEM ON
 
 WORKDIR /opt/ttn-gateway/bin

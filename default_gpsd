@@ -1,0 +1,9 @@
+START_DAEMON="true"
+
+#don't allow hot plugging USB devices as it's not needed
+USBAUTO="false"
+
+DEVICES="/dev/ttyAMA0"
+
+#options from https://github.com/proffalken/Resin-GPS-NTP/blob/master/default_gpsd
+GPSD_OPTIONS="-G -n -F /var/run/gpsd.sock"
