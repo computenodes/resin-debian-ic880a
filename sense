@@ -1,7 +1,4 @@
 #!/bin/bash
-cd /opt/logging/Adafruit_Python_DHT
-python setup.py install
-
 while true
 do
     date=`date`
