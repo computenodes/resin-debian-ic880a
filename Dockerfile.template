@@ -17,6 +17,11 @@ RUN apt-get update && apt-get install \
     cd ic880a-gateway && \
     git pull && \
     ./install.sh remote && \
+    mkdir -p /opt/logging && \
+    cd /opt/logging  && \
+    git clone https://github.com/adafruit/Adafruit_Python_DHT.git && \
+    cd Adafruit_Python_DHT && \
+    /usr/bin/python setup.py install && \
     apt-get clean && \ 
     rm -rf /var/lib/apt/lists/*
 
