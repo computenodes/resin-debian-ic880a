@@ -41,7 +41,7 @@ RUN apt-get update && apt-get install \
 
 COPY rc.local /etc
 COPY sense /opt
-COPY 09-pps.rules / etc/udev/rules.d
+COPY 09-pps.rules /etc/udev/rules.d
 RUN echo "*/2 * * * * /opt/sense" | crontab
 
 # GPSd integration based on https://github.com/proffalken/Resin-GPS-NTP/blob/master/Dockerfile.template
