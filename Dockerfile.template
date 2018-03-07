@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install \
     /usr/bin/python setup.py install --force-pi2 && \
     cd /opt && \
     git clone https://github.com/flok99/rpi_gpio_ntpd.git && \
-    cd rpi_gpi_ntpd && \
+    cd rpi_gpio_ntpd && \
     make install && \
     apt-get clean && \ 
     rm -rf /var/lib/apt/lists/*
