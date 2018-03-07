@@ -29,5 +29,5 @@ if [[ $? != 0 ]]
 then
     echo "ERROR: read time from HWclock failed"
 fi
-
+/usr/local/bin/rpi_gpio_ntp -N 1 -g 6
 exit 0
