@@ -5,8 +5,6 @@ RUN apt-get update && apt-get install \
     build-essential \
     cron \
     git  \
-    gpsd \
-    gpsd-clients \
     iproute \
     iputils-ping  \
     libcap-dev \
@@ -25,10 +23,6 @@ RUN apt-get update && apt-get install \
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git && \
     cd Adafruit_Python_DHT && \
     /usr/bin/python setup.py install --force-pi2 && \
-    cd /opt && \
-    git clone https://github.com/flok99/rpi_gpio_ntpd.git && \
-    cd rpi_gpio_ntpd && \
-    make install && \
     cd /opt && \
     curl -LO  http://archive.ntp.org/ntp4/ntp-4.2/ntp-4.2.8p6.tar.gz && \
     tar xzf ntp-4.2.8p6.tar.gz && \
