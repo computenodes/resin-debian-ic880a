@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install \
     iputils-ping  \
     libcap-dev \
     module-init-tools \
+    net-tools \ 
     ntp \
     openssh-client \
     pps-tools \
