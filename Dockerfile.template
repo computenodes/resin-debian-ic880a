@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install \
     openssh-client \
     pps-tools \
     python-dev \
-    python-openssl && \
+    python-openssl \
+    python-setuptools&& \
     git clone -b resin-debian https://github.com/computenodes/ic880a-gateway.git && \
     cd ic880a-gateway && \
     git pull && \
