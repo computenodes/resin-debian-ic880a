@@ -28,9 +28,9 @@ RUN apt-get update && apt-get install \
     cd Adafruit_Python_DHT && \
     /usr/bin/python setup.py install --force-pi2 && \
     cd /opt && \
-    curl -LO  http://archive.ntp.org/ntp4/ntp-4.2/ntp-4.2.8p6.tar.gz && \
-    tar xzf ntp-4.2.8p6.tar.gz && \
-    cd ntp-4.2.8p6 && \
+    curl -LO  http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p12.tar.gz && \
+    tar xzf ntp-4.2.8p12.tar.gz && \
+    cd ntp-4.2.8p12 && \
     ./configure --enable-linuxcaps --prefix=/usr && \
     make -j 5 && \
     make install && \
