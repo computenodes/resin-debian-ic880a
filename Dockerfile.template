@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi3-debian-build:stretch
+FROM balenalib/raspberrypi3-debian:stretch
 
 RUN install_packages\
     bash \
