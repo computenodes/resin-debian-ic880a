@@ -31,11 +31,12 @@ RUN install_packages\
 
 COPY rc.local /etc
 COPY sense /opt
+COPY run /opt
 COPY 09-pps.rules /etc/udev/rules.d
 
 #COPY default_gpsd /etc/default/gpsd
 
 
-WORKDIR /opt/ttn-gateway/bin
+WORKDIR /opt
 
-CMD ./start.sh
+CMD ./run
