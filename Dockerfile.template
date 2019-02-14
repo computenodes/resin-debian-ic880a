@@ -32,6 +32,7 @@ RUN install_packages\
 COPY rc.local /etc
 COPY sense /opt
 COPY run /opt
+COPY read_rtc /opt
 COPY 09-pps.rules /etc/udev/rules.d
 
 #COPY default_gpsd /etc/default/gpsd
