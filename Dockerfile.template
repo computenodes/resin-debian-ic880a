@@ -1,5 +1,5 @@
 FROM balenalib/raspberrypi3-debian:stretch
-
+ENV UDEV=1
 RUN install_packages\
     bash \
     build-essential \
@@ -35,7 +35,7 @@ COPY run /opt
 COPY read_rtc /opt
 COPY 09-pps.rules /etc/udev/rules.d
 
-#COPY default_gpsd /etc/default/gpsd
+COPY default_gpsd /etc/default/gpsd
 
 
 WORKDIR /opt
