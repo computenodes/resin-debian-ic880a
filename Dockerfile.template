@@ -13,7 +13,6 @@ RUN install_packages\
     libftdi-dev \
     minicom \
     net-tools \ 
-    ntp \
     openssh-client \
     pps-tools \
     python-dev \
