@@ -29,7 +29,6 @@ RUN install_packages\
     cd Adafruit_Python_DHT && \
     /usr/bin/python setup.py install --force-pi2 
 
-COPY rc.local /etc
 COPY sense /opt
 COPY sense-loop /opt
 COPY run /opt
