@@ -1,20 +1,8 @@
 #!/bin/bash
 
-modprobe rtc-ds1307
+hwclock -s
 if [[ $? != 0 ]]
 then
-    echo "ERROR: modprobe failed"
-else
-    echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
-    if [[ $? != 0 ]]
-    then
-        echo "ERROR: rtc setup failed"
-    else
-        hwclock -s
-        if [[ $? != 0 ]]
-        then
-            echo "ERROR: read time from HWclock failed"
-        fi
-    fi
+    echo "ERROR: read time from HWclock failed"
 fi
 
