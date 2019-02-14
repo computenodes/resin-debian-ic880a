@@ -28,7 +28,7 @@ RUN install_packages\
     cd /opt/  && \
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git && \
     cd Adafruit_Python_DHT && \
-    /usr/bin/python setup.py install --force-pi2 && \
+    /usr/bin/python setup.py install --force-pi2 
 
 COPY rc.local /etc
 COPY sense /opt
