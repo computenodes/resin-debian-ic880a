@@ -1,0 +1,6 @@
+#!/bin/bash
+while :
+do
+    ./sense
+    sleep 60
+done

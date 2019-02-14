@@ -31,6 +31,7 @@ RUN install_packages\
 
 COPY rc.local /etc
 COPY sense /opt
+COPY sense-loop /opt
 COPY run /opt
 COPY read_rtc /opt
 COPY 09-pps.rules /etc/udev/rules.d
