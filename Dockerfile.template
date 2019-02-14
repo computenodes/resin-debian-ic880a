@@ -10,6 +10,7 @@ RUN install_packages\
     iproute \
     iputils-ping  \
     libcap-dev \
+    libftdi-dev \
     minicom \
     net-tools \ 
     ntp \
@@ -17,7 +18,8 @@ RUN install_packages\
     pps-tools \
     python-dev \
     python-openssl \
-    python-setuptools && \
+    python-setuptools \
+    swig && \
     git clone -b resin-debian https://github.com/computenodes/ic880a-gateway.git && \
     cd ic880a-gateway && \
     git pull && \
