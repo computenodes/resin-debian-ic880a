@@ -1,6 +1,6 @@
-FROM resin/armv7hf-debian:jessie
+FROM balenalib/raspberrypi3-debian-build:stretch
 
-RUN apt-get update && apt-get install \
+RUN install_packages\
     bash \
     build-essential \
     cron \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install \
     pps-tools \
     python-dev \
     python-openssl \
-    python-setuptools&& \
+    python-setuptools && \
     git clone -b resin-debian https://github.com/computenodes/ic880a-gateway.git && \
     cd ic880a-gateway && \
     git pull && \
@@ -28,28 +28,13 @@ RUN apt-get update && apt-get install \
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git && \
     cd Adafruit_Python_DHT && \
     /usr/bin/python setup.py install --force-pi2 && \
-    cd /opt && \
-    curl -LO  http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p12.tar.gz && \
-    tar xzf ntp-4.2.8p12.tar.gz && \
-    cd ntp-4.2.8p12 && \
-    ./configure --enable-linuxcaps --prefix=/usr && \
-    make -j 5 && \
-    make install && \
-    apt-get clean && \ 
-    rm -rf /var/lib/apt/lists/*
 
 COPY rc.local /etc
 COPY sense /opt
 COPY 09-pps.rules /etc/udev/rules.d
-RUN echo "*/2 * * * * /opt/sense" | crontab
 
-# GPSd integration based on https://github.com/proffalken/Resin-GPS-NTP/blob/master/Dockerfile.template
-# and https://frillip.com/raspberry-pi-stratum-1-ntp-server/
-COPY default_gpsd /etc/default/gpsd
-COPY default_ntp etc/default/ntp
-COPY ntp.conf /etc/ntp.conf
+#COPY default_gpsd /etc/default/gpsd
 
-ENV INITSYSTEM ON
 
 WORKDIR /opt/ttn-gateway/bin
 
