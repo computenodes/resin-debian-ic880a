@@ -1,5 +1,5 @@
 #!/bin/bash
-./read_rtc
+#./read_rtc
 #/opt/logging/sense &
 cd /opt/ttn-gateway/bin/
 ./start.sh
