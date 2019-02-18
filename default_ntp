@@ -1,2 +1,0 @@
-NTPD_OPTS='-gN'
-# https://github.com/proffalken/Resin-GPS-NTP/blob/master/default_ntp
